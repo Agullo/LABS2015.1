@@ -6,6 +6,7 @@ import junit.framework.Assert;
 
 public class TestMusica {
 
+	@SuppressWarnings("deprecation")
 	@Test
 	public void testMusica() {
 		try {
@@ -35,6 +36,7 @@ public class TestMusica {
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	@Test
 	public void testMusicaInvalida() {
 		try {
@@ -42,7 +44,7 @@ public class TestMusica {
 			Assert.fail(); // se chegar aqui da erro, pois deveria lancar
 							// exception.
 		} catch (Exception e) {
-			Assert.assertEquals("Titulo da musica nao pode ser vazio.",
+			Assert.assertEquals("Titulo não pode ser nulo ou vazio. ",
 					e.getMessage());
 		}
 
@@ -51,7 +53,7 @@ public class TestMusica {
 			Assert.fail(); // se chegar aqui da erro, pois deveria lancar
 							// exception.
 		} catch (Exception e) {
-			Assert.assertEquals("Duracao da musica nao pode ser negativa.",
+			Assert.assertEquals("Duracao da musica nao pode ser negativa. ",
 					e.getMessage());
 		}
 
@@ -60,7 +62,7 @@ public class TestMusica {
 			Assert.fail(); // se chegar aqui da erro, pois deveria lancar
 							// exception.
 		} catch (Exception e) {
-			Assert.assertEquals("Genero da musica nao pode ser vazio.",
+			Assert.assertEquals("Genero da musica nao pode ser vazio. ",
 					e.getMessage());
 		}
 
