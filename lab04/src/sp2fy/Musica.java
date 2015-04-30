@@ -39,7 +39,7 @@ public class Musica {
 		if (this.nome.equals(outraMusica.getNome())) {
 			return true;
 		}
-		if(this.duracao == outraMusica.getDuracao()){
+		if (this.duracao == outraMusica.getDuracao()) {
 			return true;
 		}
 
