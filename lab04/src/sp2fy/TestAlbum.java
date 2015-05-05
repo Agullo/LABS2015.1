@@ -1,12 +1,20 @@
 package sp2fy;
 
+import static org.junit.Assert.*;
+
+import java.text.Normalizer.Form;
+
 import junit.framework.Assert;
 
+import org.junit.Before;
 import org.junit.Test;
 
 @SuppressWarnings("deprecation")
 public class TestAlbum {
+	
+		
 
+	
 	@Test
 	public void testAlbum() {
 		try {
@@ -15,7 +23,7 @@ public class TestAlbum {
 			Album TheExperience = new Album("Justin Timberlake",
 					"The 20/20 Experience", 2013);
 
-			Assert.assertEquals("Sia", FormsOfFear.getArtista());
+			assertEquals("Sia", FormsOfFear.getArtista());
 			Assert.assertEquals("1000 Forms of Fear", FormsOfFear.getTitulo());
 			Assert.assertEquals(2014, FormsOfFear.getAnoDeLancamento());
 
@@ -39,6 +47,7 @@ public class TestAlbum {
 		}
 	}
 
+	@Test
 	public void testAlbumInvalido() {
 		try {
 			Album artistaInvalido = new Album("", "1000 Forms of Fear", 2014);
@@ -54,19 +63,78 @@ public class TestAlbum {
 			Assert.fail(); // se chegar aqui da erro, pois deveria lancar
 							// exception.
 		} catch (Exception e) {
-			Assert.assertEquals("Duracao da musica nao pode ser negativa. ",
-					e.getMessage());
-		}
-
-		try {
-			Album anoInvalido = new Album("Justin Timberlake","The 20/20 Experience", -400);
-			Assert.fail(); // se chegar aqui da erro, pois deveria lancar
-							// exception.
-		} catch (Exception e) {
 			Assert.assertEquals("Titulo do Album nao pode ser vazio. ",
 					e.getMessage());
 		}
 
+		try {
+			Album anoInvalido = new Album("Justin Timberlake",
+					"The 20/20 Experience", -400);
+			Assert.fail(); // se chegar aqui da erro, pois deveria lancar
+							// exception.
+		} catch (Exception e) {
+			Assert.assertEquals(
+					"Ano de Lancamento do Album nao pode ser negativo. ",
+					e.getMessage());
+		}
+
+	}
+
+	
+	@Test
+	public void testTempoTotal() throws Exception{
+		Album FormsOfFear = new Album("Sia", "1000 Forms of Fear", 2014);
+
+		Musica chandelier = new Musica("Chandelier", 3, "Pop");
+		Musica elasticHeart = new Musica("Elastic Heart", 3, "Pop");
+		Musica cellophane = new Musica("Cellophane", 4, "Pop");
+
+		FormsOfFear.adiconaMusica(cellophane);
+		Assert.assertEquals(4, FormsOfFear.getTempoTotal());
+
+		FormsOfFear.adiconaMusica(elasticHeart);
+		FormsOfFear.adiconaMusica(chandelier);
+
+		Assert.assertEquals(10, FormsOfFear.getTempoTotal());
+
+	}
+
+
+	@Test
+	public void testOrdemDasMusicas() throws Exception {
+		Album FormsOfFear = new Album("Sia", "1000 Forms of Fear", 2014);
+
+		Musica chandelier = new Musica("Chandelier", 3, "Pop");
+		Musica elasticHeart = new Musica("Elastic Heart", 3, "Pop");
+		Musica cellophane = new Musica("Cellophane", 4, "Pop");
+
+		FormsOfFear.adiconaMusica(cellophane);
+		Assert.assertEquals(1, FormsOfFear.pegaIndexMusica("Cellophane"));
+		
+		FormsOfFear.adiconaMusica(elasticHeart);
+		FormsOfFear.adiconaMusica(chandelier);
+		
+		Assert.assertEquals(3, FormsOfFear.pegaIndexMusica("Chandelier"));
+
+	}
+	
+	@Test
+	public void testRemoveMusica() throws Exception{
+		Album FormsOfFear = new Album("Sia", "1000 Forms of Fear", 2014);
+
+		Musica chandelier = new Musica("Chandelier", 3, "Pop");
+		Musica elasticHeart = new Musica("Elastic Heart", 3, "Pop");
+		Musica cellophane = new Musica("Cellophane", 4, "Pop");
+
+		FormsOfFear.adiconaMusica(cellophane);
+		FormsOfFear.adiconaMusica(elasticHeart);
+		Assert.assertEquals(1, FormsOfFear.pegaIndexMusica("Cellophane"));
+		
+		FormsOfFear.adiconaMusica(chandelier);
+		FormsOfFear.removeMusica(cellophane);
+		assertEquals(1, FormsOfFear.pegaIndexMusica("Elastic Heart"));
+		
+		
 	}
 
 }

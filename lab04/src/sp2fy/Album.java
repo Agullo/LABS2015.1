@@ -15,6 +15,7 @@ public class Album {
 		this.artista = artista;
 		this.titulo = titulo;
 		this.anoDeLancamento = anoDeLancamento;
+		listaDeMusicas = new ArrayList<Musica>();
 
 		if (artista == null || artista.equals(""))
 			throw new Exception("Artista não pode ser nulo ou vazio. ");
@@ -59,4 +60,21 @@ public class Album {
 		}
 		return tempoTotal;
 	}
+	
+	public void adiconaMusica(Musica musica){
+			listaDeMusicas.add(musica);
+	}
+	
+	public int pegaIndexMusica(String nome){
+		for (int i = 0; i < listaDeMusicas.size(); i++) {
+			if((listaDeMusicas.get(i).getNome().equals(nome)))
+					return (i+1);
+		}
+		return 0;
+	}
+	
+	public void removeMusica(Musica musica){
+		listaDeMusicas.remove(musica);
+	}
+	
 }
