@@ -77,4 +77,9 @@ public class Album {
 		listaDeMusicas.remove(musica);
 	}
 	
+	@Override
+	public String toString() {
+		return artista;
+	}
+	
 }

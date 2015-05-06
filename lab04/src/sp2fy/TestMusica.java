@@ -4,9 +4,9 @@ import org.junit.Test;
 
 import junit.framework.Assert;
 
+@SuppressWarnings("deprecation")
 public class TestMusica {
 
-	@SuppressWarnings("deprecation")
 	@Test
 	public void testMusica() {
 		try {
@@ -36,7 +36,7 @@ public class TestMusica {
 		}
 	}
 
-	@SuppressWarnings("deprecation")
+	@SuppressWarnings("unused")
 	@Test
 	public void testMusicaInvalida() {
 		try {

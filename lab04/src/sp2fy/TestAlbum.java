@@ -1,12 +1,8 @@
 package sp2fy;
 
 import static org.junit.Assert.*;
-
-import java.text.Normalizer.Form;
-
 import junit.framework.Assert;
 
-import org.junit.Before;
 import org.junit.Test;
 
 @SuppressWarnings("deprecation")
@@ -47,6 +43,7 @@ public class TestAlbum {
 		}
 	}
 
+	@SuppressWarnings("unused")
 	@Test
 	public void testAlbumInvalido() {
 		try {
@@ -133,6 +130,7 @@ public class TestAlbum {
 		FormsOfFear.adiconaMusica(chandelier);
 		FormsOfFear.removeMusica(cellophane);
 		assertEquals(1, FormsOfFear.pegaIndexMusica("Elastic Heart"));
+		
 		
 		
 	}

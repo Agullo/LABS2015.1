@@ -45,5 +45,10 @@ public class Musica {
 
 		return false;
 	}
+	
+	@Override
+	public String toString() {
+		return nome;
+	}
 
 }
