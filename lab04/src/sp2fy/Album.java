@@ -7,7 +7,7 @@ public class Album {
 	private String artista;
 	private String titulo;
 	private int anoDeLancamento;
-	
+
 	private ArrayList<Musica> listaDeMusicas;
 
 	public Album(String artista, String titulo, int anoDeLancamento)
@@ -20,7 +20,8 @@ public class Album {
 		if (artista == null || artista.equals(""))
 			throw new Exception("Artista não pode ser nulo ou vazio. ");
 		if (anoDeLancamento <= 0)
-			throw new Exception("Ano de Lancamento do Album nao pode ser negativo. ");
+			throw new Exception(
+					"Ano de Lancamento do Album nao pode ser negativo. ");
 		if (titulo == null || titulo.equals(""))
 			throw new Exception("Titulo do Album nao pode ser vazio. ");
 
@@ -53,33 +54,34 @@ public class Album {
 		return false;
 	}
 
-	public int getTempoTotal(){
+	public int getTempoTotal() {
 		int tempoTotal = 0;
 		for (int i = 0; i < listaDeMusicas.size(); i++) {
-			tempoTotal += (listaDeMusicas.get(i).getDuracao()); 			
+			tempoTotal += (listaDeMusicas.get(i).getDuracao());
 		}
 		return tempoTotal;
 	}
-	
-	public void adiconaMusica(Musica musica){
-			listaDeMusicas.add(musica);
+
+	public void adiconaMusica(Musica musica) {
+		listaDeMusicas.add(musica);
 	}
-	
-	public int pegaIndexMusica(String nome){
+
+	public int pegaIndexMusica(String nome) {
 		for (int i = 0; i < listaDeMusicas.size(); i++) {
-			if((listaDeMusicas.get(i).getNome().equals(nome)))
-					return (i+1);
+			if ((listaDeMusicas.get(i).getNome().equals(nome)))
+				return (i + 1);
 		}
 		return 0;
 	}
-	
-	public void removeMusica(Musica musica){
+
+	public void removeMusica(Musica musica) {
 		listaDeMusicas.remove(musica);
 	}
-	
+
 	@Override
 	public String toString() {
 		return artista;
 	}
 	
+
 }

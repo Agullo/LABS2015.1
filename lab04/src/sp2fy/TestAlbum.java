@@ -7,10 +7,7 @@ import org.junit.Test;
 
 @SuppressWarnings("deprecation")
 public class TestAlbum {
-	
-		
 
-	
 	@Test
 	public void testAlbum() {
 		try {
@@ -77,9 +74,8 @@ public class TestAlbum {
 
 	}
 
-	
 	@Test
-	public void testTempoTotal() throws Exception{
+	public void testTempoTotal() throws Exception {
 		Album FormsOfFear = new Album("Sia", "1000 Forms of Fear", 2014);
 
 		Musica chandelier = new Musica("Chandelier", 3, "Pop");
@@ -96,7 +92,6 @@ public class TestAlbum {
 
 	}
 
-
 	@Test
 	public void testOrdemDasMusicas() throws Exception {
 		Album FormsOfFear = new Album("Sia", "1000 Forms of Fear", 2014);
@@ -107,16 +102,16 @@ public class TestAlbum {
 
 		FormsOfFear.adiconaMusica(cellophane);
 		Assert.assertEquals(1, FormsOfFear.pegaIndexMusica("Cellophane"));
-		
+
 		FormsOfFear.adiconaMusica(elasticHeart);
 		FormsOfFear.adiconaMusica(chandelier);
-		
+
 		Assert.assertEquals(3, FormsOfFear.pegaIndexMusica("Chandelier"));
 
 	}
-	
+
 	@Test
-	public void testRemoveMusica() throws Exception{
+	public void testRemoveMusica() throws Exception {
 		Album FormsOfFear = new Album("Sia", "1000 Forms of Fear", 2014);
 
 		Musica chandelier = new Musica("Chandelier", 3, "Pop");
@@ -126,13 +121,11 @@ public class TestAlbum {
 		FormsOfFear.adiconaMusica(cellophane);
 		FormsOfFear.adiconaMusica(elasticHeart);
 		Assert.assertEquals(1, FormsOfFear.pegaIndexMusica("Cellophane"));
-		
+
 		FormsOfFear.adiconaMusica(chandelier);
 		FormsOfFear.removeMusica(cellophane);
 		assertEquals(1, FormsOfFear.pegaIndexMusica("Elastic Heart"));
-		
-		
-		
+
 	}
 
 }
