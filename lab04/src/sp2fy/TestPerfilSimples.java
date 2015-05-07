@@ -1,10 +1,11 @@
 package sp2fy;
 
-import junit.framework.Assert;
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
 
 import org.junit.Test;
 
-@SuppressWarnings("deprecation")
 public class TestPerfilSimples {
 
 	@Test
@@ -36,9 +37,10 @@ public class TestPerfilSimples {
 
 		Gullo.adicionaAosFavoritos(Meteora);
 
-		Assert.assertEquals(Meteora, Gullo.getAlbunsFavoritos());
-		Assert.assertEquals(FormsOfFear, Gullo.getAlbuns());
+		assertTrue(Gullo.getAlbunsFavoritos().contains(Meteora) );
+		assertTrue(Gullo.getAlbuns().contains(FormsOfFear));
 
 	}
+
 
 }

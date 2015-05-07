@@ -11,12 +11,9 @@ public class Musica {
 		this.duracao = duracao;
 		this.tipo = tipo;
 
-		if (nome == null || nome.equals(""))
-			throw new Exception("Titulo não pode ser nulo ou vazio. ");
-		if (duracao <= 0)
-			throw new Exception("Duracao da musica nao pode ser negativa. ");
-		if (tipo == null || tipo.equals(""))
-			throw new Exception("Genero da musica nao pode ser vazio. ");
+		verificaErroNome(nome);
+		verificaErroDuracao(duracao);
+		verificaErroTipo(tipo);
 	}
 
 	public String getNome() {
@@ -45,10 +42,25 @@ public class Musica {
 
 		return false;
 	}
-	
+
 	@Override
 	public String toString() {
 		return nome;
+	}
+
+	private void verificaErroNome(String nome) throws Exception {
+		if (nome == null || nome.equals(""))
+			throw new Exception("Titulo não pode ser nulo ou vazio. ");
+	}
+
+	private void verificaErroDuracao(int duracao) throws Exception {
+		if (duracao <= 0)
+			throw new Exception("Duracao da musica nao pode ser negativa. ");
+	}
+
+	private void verificaErroTipo(String tipo) throws Exception {
+		if (tipo == null || tipo.equals(""))
+			throw new Exception("Genero da musica nao pode ser vazio. ");
 	}
 
 }
