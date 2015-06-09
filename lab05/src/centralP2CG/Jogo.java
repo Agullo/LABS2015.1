@@ -1,7 +1,9 @@
 package centralP2CG;
 
+/* 114111352 - Alexandre Gullo - LAB 05 - Turma 02 */
+
 public class Jogo {
-	
+
 	private String nome;
 	private double preco;
 	private String tipoDeJogo;
@@ -9,18 +11,18 @@ public class Jogo {
 	private int qntDeVezesJogadas = 0;
 	private int qntDeVezesZerado = 0;
 	private double pontuacaoMaxima = 0;
-	
+	private Jogabilidade jogabilidade;
 
-	public Jogo(String nome, double preco, String tipoDeJogo) throws Exception{
+	public Jogo(String nome, double preco, String tipoDeJogo) throws Exception {
 		this.nome = nome;
 		this.preco = preco;
 		this.tipoDeJogo = tipoDeJogo;
-		
-		if(nome == "" || nome == null)
+
+		if (nome == "" || nome == null)
 			throw new Exception("O nome nao pode ser nulo ou vazio. ");
-		if(preco <= 0)
+		if (preco <= 0)
 			throw new Exception("O preco do jogo tem que ser maior que zero. ");
-		if(tipoDeJogo == "" || tipoDeJogo == null)
+		if (tipoDeJogo == "" || tipoDeJogo == null)
 			throw new Exception("O Tipo de Jogo nao pode ser nulo ou vazio. ");
 	}
 
@@ -63,16 +65,14 @@ public class Jogo {
 	public void setPontuacaoMaxima(double pontuacaoMaxima) {
 		this.pontuacaoMaxima = pontuacaoMaxima;
 	}
-	
-	////////////////////////////////////////////////////////////////////////
-	
-	public void joga(double pontuacaoAtingida, boolean zerado){
-		if(pontuacaoAtingida > pontuacaoMaxima)
+
+	// //////////////////////////////////////////////////////////////////////
+
+	public void joga(double pontuacaoAtingida, boolean zerado) {
+		if (pontuacaoAtingida > pontuacaoMaxima)
 			pontuacaoMaxima = pontuacaoAtingida;
-		if(zerado = true)
+		if (zerado = true)
 			qntDeVezesZerado += 1;
 	}
-	
-	
 
 }

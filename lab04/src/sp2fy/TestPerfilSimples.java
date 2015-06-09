@@ -2,8 +2,6 @@ package sp2fy;
 
 import static org.junit.Assert.*;
 
-import java.util.ArrayList;
-
 import org.junit.Test;
 
 public class TestPerfilSimples {
@@ -37,10 +35,13 @@ public class TestPerfilSimples {
 
 		Gullo.adicionaAosFavoritos(Meteora);
 
-		assertTrue(Gullo.getAlbunsFavoritos().contains(Meteora) );
+		assertTrue(Gullo.getAlbunsFavoritos().contains(Meteora));
 		assertTrue(Gullo.getAlbuns().contains(FormsOfFear));
 
-	}
+		assertFalse(Gullo.getAlbunsFavoritos().contains(FormsOfFear));
+		assertTrue(Gullo.getAlbuns().contains(Meteora));
 
+		
+	}
 
 }
