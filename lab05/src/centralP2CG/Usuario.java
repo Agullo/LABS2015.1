@@ -9,7 +9,7 @@ public class Usuario {
 	private String nome;
 	private String login;
 	protected double saldo;
-	private int pontosX2P;
+	protected int pontosX2P = 0;
 	protected ArrayList<Jogo> jogosUsuario;
 
 	public Usuario(String nome, String login, double saldo)
@@ -47,21 +47,24 @@ public class Usuario {
 	}
 
 	public void comprarJogo(Jogo novoJogo) {
-		if(saldo >= novoJogo.getPreco()){
-			jogosUsuario.add(novoJogo);
+		if (jogosUsuario.contains(novoJogo)) {
+			if (saldo >= novoJogo.getPreco()) {
+				jogosUsuario.add(novoJogo);
+			}
 		}
+	}
+
+	public void adicionarDinheiro(double dinheiro)
+			throws ValorInvalidoException {
+		if (dinheiro <= 0)
+			throw new ValorInvalidoException("Valor Invalido");
+	}
+
+	public void recompensar(String nomeJogo, int scoreObtido, boolean zerou) {
 
 	}
 
-	public void adicionarDinheiro(double dinheiro) {
-
-	}
-
-	public void recompensar() {
-
-	}
-
-	public void punir() {
+	public void punir(String nomeJogo, int scoreObtido, boolean zerou) {
 
 	}
 }

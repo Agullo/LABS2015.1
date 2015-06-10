@@ -6,13 +6,19 @@ public class Jogo {
 
 	private String nome;
 	private double preco;
-	private String tipoDeJogo;
 	private String estilosDoJogo;
 	private int qntDeVezesJogadas = 0;
 	private int qntDeVezesZerado = 0;
 	private double pontuacaoMaxima = 0;
-	private Jogabilidade jogabilidade;
+	public Jogabilidade jogabilidade;
+	private String tipoDeJogo;
 
+	/**
+	 * 
+	 * @param nome, Nome do Jogo.
+	 * @param preco, Preco do Jogo.
+	 * @throws Exception
+	 */
 	public Jogo(String nome, double preco, String tipoDeJogo) throws Exception {
 		this.nome = nome;
 		this.preco = preco;
@@ -22,8 +28,12 @@ public class Jogo {
 			throw new Exception("O nome nao pode ser nulo ou vazio. ");
 		if (preco <= 0)
 			throw new Exception("O preco do jogo tem que ser maior que zero. ");
-		if (tipoDeJogo == "" || tipoDeJogo == null)
-			throw new Exception("O Tipo de Jogo nao pode ser nulo ou vazio. ");
+		if(tipoDeJogo == "" || tipoDeJogo == null)
+			throw new Exception("O Tipo do Jogo nao pode ser nulo ou vazio. ");
+	}
+
+	public String getTipoDeJogo() {
+		return tipoDeJogo;
 	}
 
 	public String getNome() {
@@ -68,6 +78,11 @@ public class Jogo {
 
 	// //////////////////////////////////////////////////////////////////////
 
+	/**
+	 * 
+	 * @param pontuacaoAtingida, Novo Score.
+	 * @param zerado, True se o jogo foi zerado, False se nao.
+	 */
 	public void joga(double pontuacaoAtingida, boolean zerado) {
 		if (pontuacaoAtingida > pontuacaoMaxima)
 			pontuacaoMaxima = pontuacaoAtingida;

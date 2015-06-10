@@ -5,24 +5,27 @@ package centralP2CG;
 import java.util.ArrayList;
 
 public class Loja {
-	
+
 	private ArrayList<Usuario> listaDeUsuarios;
-	
-	
-	public void criarUsuario(String nome, String login, double saldo, Usuario tipo){
-		
+
+	public void criarUsuario(String nome, String login, double saldo,
+			String tipo) throws IllegalAccessException {
+		if(tipo.equals("UsuarioVeterano")){
+			Usuario nome1 = new UsuarioVeterano(nome, login, saldo);
+		}
+
 	}
-	
-	public void criarJogo(String nome, double preco){
-		
+
+	public void criarJogo(String nome, double preco) {
+
 	}
-	
-	public void vendeJogo(Usuario usuario, Jogo jogo){
-		
+
+	public void vendeJogo(Usuario usuario, Jogo jogo) {
+
 	}
-	
-	public void adicionaDinheiro(Usuario usuario, double saldo){
-		
+
+	public void adicionaDinheiro(Usuario usuario, double saldo) {
+
 	}
 
 }
