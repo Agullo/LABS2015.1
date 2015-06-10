@@ -11,7 +11,7 @@ public class Usuario {
 	private String nome;
 	private String login;
 	protected double saldo;
-	protected int pontosX2P = 0;
+	public int pontosX2P = 0;
 	protected ArrayList<Jogo> jogosUsuario;
 
 	public Usuario(String nome, String login, double saldo)
@@ -56,6 +56,13 @@ public class Usuario {
 		}
 	}
 
+	public void jogar(String nomeDoJogo, int pontuacaoMaxima, boolean zerou){
+		if(jogosUsuario.contains(nomeDoJogo)){
+		}
+	}
+	
+	
+	
 	public void adicionarDinheiro(double dinheiro)
 			throws ValorInvalidoException {
 		if (dinheiro <= 0)

@@ -7,17 +7,17 @@ abstract class FactoryJogo {
 
 	 void criarJogoRPG(String nome, double preco, String tipoDeJogo, Jogabilidade listJogabilidade)
 			throws Exception {
-		new Jogo(nome, preco, tipoDeJogo);
+		new RPG(nome, preco);
 	}
 
 	 void criarJogoLuta(String nome, double preco, String tipoDeJogo, Jogabilidade listJogabilidade)
 			throws Exception {
-		new Jogo(nome, preco, tipoDeJogo);
+		new Luta(nome, preco);
 	}
 
 	void criarJogoPlataforma(String nome, double preco, String tipoDeJogo, Jogabilidade listJogabilidade)
 			throws Exception {
-		new Jogo(nome, preco, tipoDeJogo);
+		new Plataforma(nome, preco);
 
 	}
 

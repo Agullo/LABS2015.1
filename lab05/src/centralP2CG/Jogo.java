@@ -1,5 +1,7 @@
 package centralP2CG;
 
+import java.util.ArrayList;
+
 /* 114111352 - Alexandre Gullo - LAB 05 - Turma 02 */
 
 public class Jogo {
@@ -9,27 +11,27 @@ public class Jogo {
 	private String estilosDoJogo;
 	private int qntDeVezesJogadas = 0;
 	private int qntDeVezesZerado = 0;
-	private double pontuacaoMaxima = 0;
-	public Jogabilidade jogabilidade;
+	private int pontuacaoMaxima = 0;
 	private String tipoDeJogo;
+	private ArrayList<Jogabilidade> Jogabilidade;
 
 	/**
 	 * 
-	 * @param nome, Nome do Jogo.
-	 * @param preco, Preco do Jogo.
+	 * @param nome
+	 *            , Nome do Jogo.
+	 * @param preco
+	 *            , Preco do Jogo.
 	 * @throws Exception
 	 */
-	public Jogo(String nome, double preco, String tipoDeJogo) throws Exception {
+	public Jogo(String nome, double preco) throws Exception {
 		this.nome = nome;
 		this.preco = preco;
-		this.tipoDeJogo = tipoDeJogo;
 
 		if (nome == "" || nome == null)
 			throw new Exception("O nome nao pode ser nulo ou vazio. ");
 		if (preco <= 0)
 			throw new Exception("O preco do jogo tem que ser maior que zero. ");
-		if(tipoDeJogo == "" || tipoDeJogo == null)
-			throw new Exception("O Tipo do Jogo nao pode ser nulo ou vazio. ");
+
 	}
 
 	public String getTipoDeJogo() {
@@ -72,7 +74,7 @@ public class Jogo {
 		return pontuacaoMaxima;
 	}
 
-	public void setPontuacaoMaxima(double pontuacaoMaxima) {
+	public void setPontuacaoMaxima(int pontuacaoMaxima) {
 		this.pontuacaoMaxima = pontuacaoMaxima;
 	}
 
@@ -80,10 +82,12 @@ public class Jogo {
 
 	/**
 	 * 
-	 * @param pontuacaoAtingida, Novo Score.
-	 * @param zerado, True se o jogo foi zerado, False se nao.
+	 * @param pontuacaoAtingida
+	 *            , Novo Score.
+	 * @param zerado
+	 *            , True se o jogo foi zerado, False se nao.
 	 */
-	public void joga(double pontuacaoAtingida, boolean zerado) {
+	public void joga(int pontuacaoAtingida, boolean zerado) {
 		if (pontuacaoAtingida > pontuacaoMaxima)
 			pontuacaoMaxima = pontuacaoAtingida;
 		if (zerado = true)

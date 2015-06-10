@@ -36,9 +36,11 @@ public class Loja extends FactoryJogo {
 	public void vendeJogo(Usuario usuario, Jogo jogo) {
 		if (listaDeUsuarios.contains(usuario)) {
 			if (usuario.getSaldo() > jogo.getPreco()) {
-
+				
+				//
 			}
 		}
+		(usuario.pontosX2P) = (int) (10 * jogo.getPreco()); 
 	}
 
 	public void adicionaDinheiro(Usuario usuario, double dinheiro)
