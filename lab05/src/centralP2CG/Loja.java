@@ -4,28 +4,50 @@ package centralP2CG;
 
 import java.util.ArrayList;
 
-public class Loja {
+import Exceptions.ValorInvalidoException;
+
+public class Loja extends FactoryJogo {
 
 	private ArrayList<Usuario> listaDeUsuarios;
 
 	public void criarUsuario(String nome, String login, double saldo,
 			String tipo) throws IllegalAccessException {
-		if(tipo.equals("UsuarioVeterano")){
-			Usuario nome1 = new UsuarioVeterano(nome, login, saldo);
+		if (tipo.equals("UsuarioVeterano")) {
+			new UsuarioVeterano(nome, login, saldo);
 		}
 
 	}
 
-	public void criarJogo(String nome, double preco) {
+	public void criarJogo(String nomeDoJogo, double preco, String tipoDeJogo,
+			Jogabilidade listaJogabilidade) throws Exception {
 
+		if (tipoDeJogo.equals("RPG")) {
+			criarJogoRPG(nomeDoJogo, preco, tipoDeJogo, listaJogabilidade);
+		}
+		if (tipoDeJogo.equals("Plataforma")) {
+			criarJogoPlataforma(nomeDoJogo, preco, tipoDeJogo,
+					listaJogabilidade);
+		}
+		if (tipoDeJogo.equals("Luta")) {
+			criarJogoLuta(nomeDoJogo, preco, tipoDeJogo, listaJogabilidade);
+		}
 	}
 
 	public void vendeJogo(Usuario usuario, Jogo jogo) {
+		if (listaDeUsuarios.contains(usuario)) {
+			if (usuario.getSaldo() > jogo.getPreco()) {
 
+			}
+		}
 	}
 
-	public void adicionaDinheiro(Usuario usuario, double saldo) {
-
+	public void adicionaDinheiro(Usuario usuario, double dinheiro)
+			throws ValorInvalidoException {
+		if (listaDeUsuarios.contains(usuario)) {
+			usuario.adicionarDinheiro(dinheiro);
+		}
 	}
+	
+	
 
 }

@@ -1,4 +1,4 @@
-package centralP2CG;
+package Exceptions;
 
 public class ValorInvalidoException extends Exception {
 	

@@ -4,6 +4,8 @@ package centralP2CG;
 
 import java.util.ArrayList;
 
+import Exceptions.ValorInvalidoException;
+
 public class Usuario {
 
 	private String nome;
