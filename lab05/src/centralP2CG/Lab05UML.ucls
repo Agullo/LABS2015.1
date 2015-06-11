@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.1.8" icons="true" automaticImage="JPEG" always-add-relationships="false" 
   generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
-  <package id="1" language="java" name="centralP2CG" project="lab05" file="/lab05/src/centralP2CG" binary="false" 
-    corner="BOTTOM_RIGHT">    
+  <package id="1" language="java" name="centralP2CG" project="114111352_ALEXANDRE_LAB05" 
+    file="/114111352_ALEXANDRE_LAB05/src/centralP2CG" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="59" y="58"/>    
     <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
-  <class id="2" language="java" name="centralP2CG.Usuario" project="lab05" file="/lab05/src/centralP2CG/Usuario.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
+  <class id="2" language="java" name="centralP2CG.Usuario" project="114111352_ALEXANDRE_LAB05" 
+    file="/114111352_ALEXANDRE_LAB05/src/centralP2CG/Usuario.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="106" y="370"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -15,8 +15,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="centralP2CG.Jogo" project="lab05" file="/lab05/src/centralP2CG/Jogo.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
+  <class id="3" language="java" name="centralP2CG.Jogo" project="114111352_ALEXANDRE_LAB05" 
+    file="/114111352_ALEXANDRE_LAB05/src/centralP2CG/Jogo.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="571" y="683"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -24,8 +24,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="centralP2CG.UsuarioNoob" project="lab05" 
-    file="/lab05/src/centralP2CG/UsuarioNoob.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="4" language="java" name="centralP2CG.UsuarioNoob" project="114111352_ALEXANDRE_LAB05" 
+    file="/114111352_ALEXANDRE_LAB05/src/centralP2CG/UsuarioNoob.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="95" y="675"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -33,8 +33,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="centralP2CG.RPG" project="lab05" file="/lab05/src/centralP2CG/RPG.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
+  <class id="5" language="java" name="centralP2CG.RPG" project="114111352_ALEXANDRE_LAB05" 
+    file="/114111352_ALEXANDRE_LAB05/src/centralP2CG/RPG.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="845" y="838"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -42,8 +42,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="centralP2CG.FactoryJogo" project="lab05" 
-    file="/lab05/src/centralP2CG/FactoryJogo.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="6" language="java" name="centralP2CG.FactoryJogo" project="114111352_ALEXANDRE_LAB05" 
+    file="/114111352_ALEXANDRE_LAB05/src/centralP2CG/FactoryJogo.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="473" y="102"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -51,8 +51,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="Exceptions.ValorInvalidoException" project="lab05" 
-    file="/lab05/src/Exceptions/ValorInvalidoException.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="7" language="java" name="Exceptions.ValorInvalidoException" project="114111352_ALEXANDRE_LAB05" 
+    file="/114111352_ALEXANDRE_LAB05/src/Exceptions/ValorInvalidoException.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="750" y="255"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -60,8 +60,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <enumeration id="8" language="java" name="centralP2CG.Jogabilidade" project="lab05" 
-    file="/lab05/src/centralP2CG/Jogabilidade.java" binary="false" corner="BOTTOM_RIGHT">    
+  <enumeration id="8" language="java" name="centralP2CG.Jogabilidade" project="114111352_ALEXANDRE_LAB05" 
+    file="/114111352_ALEXANDRE_LAB05/src/centralP2CG/Jogabilidade.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="807" y="529"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -69,8 +69,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
-  <class id="9" language="java" name="centralP2CG.UsuarioVeterano" project="lab05" 
-    file="/lab05/src/centralP2CG/UsuarioVeterano.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="9" language="java" name="centralP2CG.UsuarioVeterano" project="114111352_ALEXANDRE_LAB05" 
+    file="/114111352_ALEXANDRE_LAB05/src/centralP2CG/UsuarioVeterano.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="321" y="674"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -78,13 +78,13 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <package id="10" language="java" name="Exceptions" project="lab05" file="/lab05/src/Exceptions" binary="false" 
-    corner="BOTTOM_RIGHT">    
+  <package id="10" language="java" name="Exceptions" project="114111352_ALEXANDRE_LAB05" 
+    file="/114111352_ALEXANDRE_LAB05/src/Exceptions" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="208" y="68"/>    
     <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
-  <class id="11" language="java" name="centralP2CG.Plataforma" project="lab05" 
-    file="/lab05/src/centralP2CG/Plataforma.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="11" language="java" name="centralP2CG.Plataforma" project="114111352_ALEXANDRE_LAB05" 
+    file="/114111352_ALEXANDRE_LAB05/src/centralP2CG/Plataforma.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="824" y="719"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -92,8 +92,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="12" language="java" name="centralP2CG.Loja" project="lab05" file="/lab05/src/centralP2CG/Loja.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
+  <class id="12" language="java" name="centralP2CG.Loja" project="114111352_ALEXANDRE_LAB05" 
+    file="/114111352_ALEXANDRE_LAB05/src/centralP2CG/Loja.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="462" y="310"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -101,8 +101,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="13" language="java" name="centralP2CG.Luta" project="lab05" file="/lab05/src/centralP2CG/Luta.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
+  <class id="13" language="java" name="centralP2CG.Luta" project="114111352_ALEXANDRE_LAB05" 
+    file="/114111352_ALEXANDRE_LAB05/src/centralP2CG/Luta.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="365" y="869"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -111,61 +111,77 @@
     </display>  
   </class>  
   <generalization id="14">    
-    <end type="SOURCE" refId="9"/>    
+    <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="2"/>  
   </generalization>  
   <generalization id="15">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="6"/>  
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="2"/>  
   </generalization>  
   <association id="16">    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="17" name="listaDeUsuarios"/>      
-      <multiplicity id="18" minimum="0" maximum="2147483647"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="17" name="jogosUsuario">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="18" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
+    <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <generalization id="19">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="6"/>  
+  </generalization>  
+  <generalization id="20">    
     <end type="SOURCE" refId="11"/>    
     <end type="TARGET" refId="3"/>  
   </generalization>  
-  <association id="20">    
+  <association id="21">    
     <bendpoint x="457" y="473"/>    
     <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="21" name="listaDeJogosLoja"/>      
-      <multiplicity id="22" minimum="0" maximum="2147483647"/>    
+      <attribute id="22" name="listaDeJogosLoja">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="23" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="23">    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="3"/>  
-  </generalization>  
-  <generalization id="24">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="3"/>  
-  </generalization>  
-  <association id="25">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="26" name="jogosUsuario"/>      
-      <multiplicity id="27" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="28">    
+  <association id="24">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="29" name="jogabilidade"/>      
-      <multiplicity id="30" minimum="0" maximum="2147483647"/>    
+      <attribute id="25" name="jogabilidade">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="26" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <association id="27">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="28" name="listaDeUsuarios">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="29" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="30">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
   <generalization id="31">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="2"/>  
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="3"/>  
   </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
