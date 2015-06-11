@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 import Exceptions.ValorInvalidoException;
 
-public class Usuario {
+public abstract class Usuario {
 
 	private String nome;
 	private String login;
@@ -44,6 +44,10 @@ public class Usuario {
 		return pontosX2P;
 	}
 
+	public void setPontosX2P(int pontosX2P) {
+		this.pontosX2P = pontosX2P;
+	}
+
 	public ArrayList<Jogo> getJogosUsuario() {
 		return jogosUsuario;
 	}
@@ -56,24 +60,41 @@ public class Usuario {
 		}
 	}
 
-	public void jogar(String nomeDoJogo, int pontuacaoMaxima, boolean zerou){
-		if(jogosUsuario.contains(nomeDoJogo)){
+	public void jogar(String nomeDoJogo, int pontuacaoMaxima, boolean zerou) {
+		if (jogosUsuario.contains(nomeDoJogo)) {
 		}
 	}
-	
-	
-	
+
 	public void adicionarDinheiro(double dinheiro)
 			throws ValorInvalidoException {
 		if (dinheiro <= 0)
 			throw new ValorInvalidoException("Valor Invalido");
 	}
 
-	public void recompensar(String nomeJogo, int scoreObtido, boolean zerou) {
-
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Usuario other = (Usuario) obj;
+		if (nome == null) {
+			if (other.nome != null)
+				return false;
+		} else if (!nome.equals(other.nome))
+			return false;
+		return true;
 	}
 
-	public void punir(String nomeJogo, int scoreObtido, boolean zerou) {
+	public int punir(String nomeJogo, int scoreObtido, Boolean zerou) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
+	public int recompensar(String nomeJogo, int scoreObtido, Boolean zerou) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }

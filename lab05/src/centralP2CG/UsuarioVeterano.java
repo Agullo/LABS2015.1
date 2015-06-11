@@ -18,25 +18,45 @@ public class UsuarioVeterano extends Usuario {
 		}
 	}
 
-	@Override
-	public void recompensar(String nomeJogo, int scoreObtido, boolean zerou) {
-		if(jogosUsuario.contains(nomeJogo)){
-			if(Jogabilidade.ONLINE != null)
-				pontosX2P += 10;
-			if(Jogabilidade.COOPERATIVO != null)
-				pontosX2P += 20;
+	public int recompensar(String nomeJogo, int scoreObtido, Boolean zerou) {
+
+		int pontos = 0;
+		for (int i = 0; i < getJogosUsuario().size(); i++) {
+			if (getJogosUsuario().get(i).getNome().equals(nomeJogo)) {
+				for (int j = 0; j < getJogosUsuario().get(i).getJogabilidade()
+						.size(); j++) {
+					if (getJogosUsuario().get(i).getJogabilidade().get(j) == Jogabilidade.ONLINE) {
+						pontos = pontos + 10;
+					}
+					if (getJogosUsuario().get(i).getJogabilidade().get(j) == Jogabilidade.COOPERATIVO) {
+						pontos = pontos + 20;
+					}
+
+				}
+				break;
+			}
 		}
-			
+		return pontos;
 	}
 
 	@Override
-	public void punir(String nomeJogo, int scoreObtido, boolean zerou) {
-		if(jogosUsuario.contains(nomeJogo)){
-			if(Jogabilidade.COMPETITIVO != null)
-				pontosX2P -= 20;
-			if(Jogabilidade.COOPERATIVO != null)
-				pontosX2P -= 20;
+	public int punir(String nomeJogo, int scoreObtido, Boolean zerou) {
+
+		int pontos = 0;
+		for (int i = 0; i < getJogosUsuario().size(); i++) {
+			if (getJogosUsuario().get(i).getNome().equals(nomeJogo)) {
+				for (int j = 0; j < getJogosUsuario().get(i).getJogabilidade()
+						.size(); j++) {
+					if (getJogosUsuario().get(i).getJogabilidade().get(j) == Jogabilidade.COMPETITIVO) {
+						pontos = pontos - 20;
+					}
+					if (getJogosUsuario().get(i).getJogabilidade().get(j) == Jogabilidade.COOPERATIVO) {
+						pontos = pontos - 20;
+					}
+				}
+			}
 		}
+		return pontos;
 	}
 
 }

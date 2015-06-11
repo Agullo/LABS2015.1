@@ -1,6 +1,6 @@
 package centralP2CG;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /* 114111352 - Alexandre Gullo - LAB 05 - Turma 02 */
 
@@ -8,12 +8,11 @@ public class Jogo {
 
 	private String nome;
 	private double preco;
-	private String estilosDoJogo;
 	private int qntDeVezesJogadas = 0;
 	protected int qntDeVezesZerado = 0;
 	protected int pontuacaoMaxima = 0;
 	private String tipoDeJogo;
-	private ArrayList<Jogabilidade> Jogabilidade;
+	private List<Jogabilidade> jogabilidade;
 
 	/**
 	 * 
@@ -101,4 +100,27 @@ public class Jogo {
 		return super.clone();
 	}
 
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Jogo other = (Jogo) obj;
+		if (nome == null) {
+			if (other.nome != null)
+				return false;
+		} else if (!nome.equals(other.nome))
+			return false;
+		return true;
+	}
+
+	public void setJogabilidade(List<Jogabilidade> jogabilidade) {
+		this.jogabilidade = jogabilidade;
+	}
+
+	public List<Jogabilidade> getJogabilidade() {
+		return jogabilidade;
+	}
 }

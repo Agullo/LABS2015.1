@@ -72,5 +72,26 @@ public class Loja extends FactoryJogo {
 
 		}
 	}
+	
+	public void upgrade (String login) throws Exception{
+		for (int i = 0; i < listaDeUsuarios.size(); i++) {			
+			if (listaDeUsuarios.get(i).getLogin().equals(login)) {
+				if((listaDeUsuarios.get(i).getClass().equals(UsuarioVeterano.class)) || 
+						(listaDeUsuarios.get(i).getPontosX2P() < 1000)) {
+					throw new Exception();
+					
+				}
+				break;
+			}
+		}
+	}
+
+	public ArrayList<Jogo> getListaDeJogosLoja() {
+		return listaDeJogosLoja;
+	}
+
+	public void setListaDeJogosLoja(ArrayList<Jogo> listaDeJogosLoja) {
+		this.listaDeJogosLoja = listaDeJogosLoja;
+	}
 
 }
