@@ -10,8 +10,8 @@ public class Jogo {
 	private double preco;
 	private String estilosDoJogo;
 	private int qntDeVezesJogadas = 0;
-	private int qntDeVezesZerado = 0;
-	private int pontuacaoMaxima = 0;
+	protected int qntDeVezesZerado = 0;
+	protected int pontuacaoMaxima = 0;
 	private String tipoDeJogo;
 	private ArrayList<Jogabilidade> Jogabilidade;
 
@@ -87,11 +87,18 @@ public class Jogo {
 	 * @param zerado
 	 *            , True se o jogo foi zerado, False se nao.
 	 */
-	public void joga(int pontuacaoAtingida, boolean zerado) {
+	public void jogar(int pontuacaoAtingida, boolean zerado) {
 		if (pontuacaoAtingida > pontuacaoMaxima)
 			pontuacaoMaxima = pontuacaoAtingida;
-		if (zerado = true)
+		if (zerado = true) {
 			qntDeVezesZerado += 1;
+		}
+
+	}
+
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		return super.clone();
 	}
 
 }
