@@ -4,7 +4,8 @@ package centralP2CG;
 
 import java.util.ArrayList;
 
-import Exceptions.ValorInvalidoException;
+import exceptions.NomeDoJogoInvalidoException;
+import exceptions.ValorInvalidoException;
 
 public abstract class Usuario {
 
@@ -60,7 +61,9 @@ public abstract class Usuario {
 		}
 	}
 
-	public void jogar(String nomeDoJogo, int pontuacaoMaxima, boolean zerou) {
+	public void jogar(String nomeDoJogo, int pontuacaoMaxima, boolean zerou) throws NomeDoJogoInvalidoException {
+		if (nomeDoJogo == "" || nomeDoJogo == null)
+			throw new NomeDoJogoInvalidoException("Nome Do Jogo Invalido");
 		if (jogosUsuario.contains(nomeDoJogo)) {
 		}
 	}
