@@ -1,6 +1,6 @@
 package centralP2CG;
 
-public class Luta extends Jogo {
+public  class Luta extends Jogo {
 
 	public Luta(String nome, double preco) throws Exception {
 		super(nome, preco);
@@ -15,5 +15,11 @@ public class Luta extends Jogo {
 		}
 		
 
+	}
+
+	@Override
+	public int compareTo(Jogo o) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }

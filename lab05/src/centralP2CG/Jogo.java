@@ -4,7 +4,7 @@ import java.util.List;
 
 /* 114111352 - Alexandre Gullo - LAB 05 - Turma 02 */
 
-public class Jogo {
+public abstract class Jogo implements Comparable<Jogo>{
 
 	private String nome;
 	private double preco;

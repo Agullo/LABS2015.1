@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 import exceptions.ValorInvalidoException;
 
-public class Loja extends FactoryJogo {
+public class Loja extends FactoryJogo implements TiposOrdenacaoUsuarios {
 
 	public ArrayList<Usuario> listaDeUsuarios;
 	public ArrayList<Jogo> listaDeJogosLoja;
@@ -20,6 +20,7 @@ public class Loja extends FactoryJogo {
 
 	/**
 	 * Lista dos Jogos.
+	 * 
 	 * @return listaDeJogosLoja
 	 */
 	public ArrayList<Jogo> getListaDeJogosLoja() {
@@ -32,7 +33,9 @@ public class Loja extends FactoryJogo {
 
 	/**
 	 * Armazenar Usuario.
-	 * @param usuario, sera adicionado na lista de usuarios.
+	 * 
+	 * @param usuario
+	 *            , sera adicionado na lista de usuarios.
 	 */
 	public void armazenarUsuario(Usuario usuario) {
 		listaDeUsuarios.add(usuario);
@@ -40,7 +43,9 @@ public class Loja extends FactoryJogo {
 
 	/**
 	 * Pesquisar Usuario.
-	 * @param usuario, para ser pesquisado.
+	 * 
+	 * @param usuario
+	 *            , para ser pesquisado.
 	 * @return True se a lista conter o usuario, False se nao.
 	 */
 	public boolean pesquisarUsuario(Usuario usuario) {
@@ -52,10 +57,14 @@ public class Loja extends FactoryJogo {
 
 	/**
 	 * 
-	 * @param nome, novo nome.
-	 * @param login, novo login.
-	 * @param saldo, saldo do usuario.
-	 * @param tipo, Veterano ou Noob.
+	 * @param nome
+	 *            , novo nome.
+	 * @param login
+	 *            , novo login.
+	 * @param saldo
+	 *            , saldo do usuario.
+	 * @param tipo
+	 *            , Veterano ou Noob.
 	 * @throws IllegalAccessException
 	 */
 	public void criarUsuario(String nome, String login, double saldo,
@@ -71,10 +80,15 @@ public class Loja extends FactoryJogo {
 
 	/**
 	 * Criar um Jogo
-	 * @param nomeDoJogo, nome do jogo.
-	 * @param preco, preco do jogo.
-	 * @param tipoDeJogo, tipo do jogo
-	 * @param listaJogabilidade, Jogabilidades
+	 * 
+	 * @param nomeDoJogo
+	 *            , nome do jogo.
+	 * @param preco
+	 *            , preco do jogo.
+	 * @param tipoDeJogo
+	 *            , tipo do jogo
+	 * @param listaJogabilidade
+	 *            , Jogabilidades
 	 * @throws Exception
 	 */
 	public void criarJogo(String nomeDoJogo, double preco, String tipoDeJogo,
@@ -94,8 +108,10 @@ public class Loja extends FactoryJogo {
 
 	/**
 	 * 
-	 * @param usuario, usuario que comprara o jogo.
-	 * @param jogo, jogo que sera vendido.
+	 * @param usuario
+	 *            , usuario que comprara o jogo.
+	 * @param jogo
+	 *            , jogo que sera vendido.
 	 * @throws CloneNotSupportedException
 	 */
 	public void vendeJogo(Usuario usuario, Jogo jogo)
@@ -111,8 +127,11 @@ public class Loja extends FactoryJogo {
 
 	/**
 	 * Adicionar Dinheiro.
-	 * @param usuario, que sera a adicionado dinheiro.
-	 * @param dinheiro, para adicionar.
+	 * 
+	 * @param usuario
+	 *            , que sera a adicionado dinheiro.
+	 * @param dinheiro
+	 *            , para adicionar.
 	 * @throws ValorInvalidoException
 	 */
 	public void adicionaDinheiro(Usuario usuario, double dinheiro)
@@ -124,7 +143,9 @@ public class Loja extends FactoryJogo {
 
 	/**
 	 * informacoes do Usuario
-	 * @param usuario, pesquisado para dar informacoes.
+	 * 
+	 * @param usuario
+	 *            , pesquisado para dar informacoes.
 	 */
 	public void informacoesUsuario(Usuario usuario) {
 		System.out.println("=== Central P2-CG ===");
@@ -172,6 +193,12 @@ public class Loja extends FactoryJogo {
 		System.out.println("3- Vender Jogo");
 		System.out.println("4- Adicionar Dinheiro");
 		System.out.println("5- Sair");
+
+	}
+
+	@Override
+	public void ordenaPorX2P() {
+		// TODO Auto-generated method stub
 
 	}
 

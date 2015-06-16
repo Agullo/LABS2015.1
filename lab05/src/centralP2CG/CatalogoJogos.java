@@ -1,8 +1,9 @@
 package centralP2CG;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
-public class CatalogoJogos {
+public class CatalogoJogos implements TiposOrdenacaoJogos, Comparable<CatalogoJogos>{
 
 	public ArrayList<Jogo> catalogoDeJogos;
 
@@ -58,6 +59,37 @@ public class CatalogoJogos {
 		return jogosJogabilidade;
 		
 	}
+
+	@Override
+	public void ordenaPorVicio() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void ordenaPorDesempenho() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void ordenaPorExperiencia() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void ordenaPorDefault() {
+		 Collections.sort(catalogoDeJogos);
+	}
+
+	@Override
+	public int compareTo(CatalogoJogos outroCatalogo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+
 
 	
 	
